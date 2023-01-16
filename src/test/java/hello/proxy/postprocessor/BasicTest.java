@@ -23,13 +23,13 @@ public class BasicTest {
     }
 
     static class A {
-        public void halloA() {
+        public void helloA() {
             log.info("hello A");
         }
     }
 
     static class B {
-        public void halloB() {
+        public void helloB() {
             log.info("hello B");
         }
     }
@@ -40,7 +40,7 @@ public class BasicTest {
 
         //A는 빈으로 등록된다.
         A a = applicationContext.getBean("beanA", A.class);
-        a.halloA();
+        a.helloA();
 
         //B는 빈으로 등록되지 않는다.
         assertThrows(NoSuchBeanDefinitionException.class, () -> applicationContext.getBean(B.class));
