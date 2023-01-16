@@ -64,6 +64,4 @@ public class ProxyFactoryConfigV1 {
 
         return new DefaultPointcutAdvisor(pointcut, advice);
     }
-
-
 }
